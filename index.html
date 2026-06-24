@@ -15,63 +15,28 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
 background:#ffd400;
+font-family:Arial, Helvetica, sans-serif;
 color:#111;
 overflow-x:hidden;
 }
 
 .hero{
-position:relative;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+padding:20px 20px 40px;
+text-align:center;
 }
 
-.hero-bg{
-position:absolute;
-top:0;
-left:0;
+.hero-banner{
 width:100%;
-height:100%;
-object-fit:cover;
+max-width:1800px;
+height:auto;
+display:block;
+margin:0 auto;
 opacity:.35;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-text-align:center;
-padding:40px;
-max-width:1200px;
-}
-
-.hero h1{
-font-size:clamp(70px,12vw,180px);
-font-weight:900;
-line-height:.9;
-margin-bottom:20px;
-text-transform:uppercase;
-}
-
-.hero h2{
-font-size:clamp(24px,4vw,60px);
-font-weight:900;
-text-transform:uppercase;
-margin-bottom:20px;
-}
-
-.tagline{
-font-size:18px;
-font-weight:bold;
-letter-spacing:2px;
-text-transform:uppercase;
-margin-bottom:40px;
-}
-
 .buttons{
+margin-top:30px;
 display:flex;
 justify-content:center;
 gap:20px;
@@ -80,13 +45,13 @@ flex-wrap:wrap;
 
 .btn{
 display:inline-block;
-padding:18px 36px;
 background:#111;
 color:#ffd400;
 text-decoration:none;
-font-weight:900;
+padding:18px 36px;
 border-radius:999px;
-font-size:20px;
+font-size:22px;
+font-weight:900;
 transition:.2s;
 }
 
@@ -95,13 +60,13 @@ transform:translateY(-2px);
 }
 
 .section{
-max-width:1300px;
+max-width:1400px;
 margin:auto;
-padding:80px 30px;
+padding:70px 30px;
 }
 
 .section-title{
-font-size:60px;
+font-size:64px;
 font-weight:900;
 text-transform:uppercase;
 margin-bottom:30px;
@@ -110,7 +75,7 @@ margin-bottom:30px;
 .player{
 background:#111;
 padding:20px;
-border-radius:30px;
+border-radius:24px;
 }
 
 .player iframe{
@@ -121,43 +86,39 @@ border:none;
 
 .video-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 }
 
 .video-card{
 background:#111;
+padding:10px;
 border-radius:20px;
-overflow:hidden;
 }
 
 .video-card iframe{
 width:100%;
-height:260px;
+height:320px;
 border:none;
+border-radius:12px;
 }
 
 .about{
 font-size:24px;
 line-height:1.8;
-max-width:900px;
+max-width:1000px;
 }
 
 footer{
-padding:60px;
 text-align:center;
-font-weight:bold;
-font-size:18px;
+padding:60px;
+font-weight:700;
 }
 
-@media(max-width:768px){
-
-.hero{
-min-height:80vh;
-}
+@media(max-width:900px){
 
 .section-title{
-font-size:40px;
+font-size:42px;
 }
 
 .video-grid{
@@ -172,6 +133,11 @@ height:220px;
 font-size:18px;
 }
 
+.btn{
+font-size:18px;
+padding:14px 24px;
+}
+
 }
 
 </style>
@@ -181,33 +147,26 @@ font-size:18px;
 
 <section class="hero">
 
-<img src="assets/banner.png" class="hero-bg" alt="TSS">
-
-<div class="hero-content">
-
-<h1>TSS</h1>
-
-<h2>Transcendence Sonic Sessions</h2>
-
-<div class="tagline">
-House • Progressive House • Neo Trance • UK Garage • Techno
-</div>
+<img
+src="assets/banner.png"
+alt="TSS"
+class="hero-banner">
 
 <div class="buttons">
 
-<a class="btn"
+<a
+class="btn"
 href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
 target="_blank">
 🎧 LISTEN
 </a>
 
-<a class="btn"
+<a
+class="btn"
 href="https://www.youtube.com/@brzhezovsky"
 target="_blank">
 ▶ WATCH
 </a>
-
-</div>
 
 </div>
 
@@ -261,8 +220,8 @@ src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/brzhezovsky/s
 
 <div class="about">
 
-Transcendence Sonic Sessions is a radio journey through
-House, Progressive House, Neo Trance, UK Garage and Techno.
+Transcendence Sonic Sessions is a radio show focused on House,
+Progressive House, Neo Trance, UK Garage and Techno.
 
 Each episode explores underground electronic music,
 melodic grooves, rave culture influences and contemporary club sounds curated by Brzhezovsky.
