@@ -16,8 +16,6 @@ box-sizing:border-box;
 :root{
 --yellow:#ffd400;
 --black:#000;
---dark:#111;
---gray:#222;
 }
 
 body{
@@ -37,6 +35,7 @@ min-height:100vh;
 
 .hero{
 padding:0;
+background:var(--yellow);
 }
 
 .hero img{
@@ -53,6 +52,7 @@ justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 padding:35px 20px 50px;
+background:var(--yellow);
 }
 
 .btn{
@@ -69,17 +69,17 @@ transition:.2s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
-/* BLACK CONTENT AREA */
+/* CONTENT */
 
 .content{
-background:#000;
+background:var(--yellow);
 padding-bottom:80px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
 padding:80px 50px;
@@ -91,24 +91,23 @@ font-size:110px;
 font-weight:900;
 line-height:.9;
 text-transform:uppercase;
-color:var(--yellow);
-margin-bottom:30px;
+color:#000;
+margin-bottom:40px;
 }
 
-/* LATEST EPISODE */
+/* EPISODE */
 
 .episode-layout{
 display:grid;
-grid-template-columns:1fr 320px;
+grid-template-columns:1fr 420px;
 gap:40px;
-align-items:start;
+align-items:center;
 }
 
 .player{
 background:#111;
 padding:20px;
 border-radius:24px;
-border:2px solid #222;
 }
 
 .player iframe{
@@ -118,8 +117,10 @@ border:none;
 }
 
 .mascot{
-width:100%;
+width:420px;
+max-width:100%;
 display:block;
+margin:auto;
 }
 
 /* VIDEO ARCHIVE */
@@ -127,46 +128,50 @@ display:block;
 .archive-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:25px;
+gap:30px;
 }
 
 .card{
-background:#111;
-border:2px solid #222;
+display:block;
+text-decoration:none;
+background:#000;
 border-radius:20px;
-padding:30px;
+overflow:hidden;
 transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-4px);
-border-color:var(--yellow);
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card-info{
+padding:24px;
 }
 
 .card-number{
-font-size:54px;
+font-size:48px;
 font-weight:900;
 color:var(--yellow);
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .card-title{
 font-size:22px;
 font-weight:900;
-margin-bottom:12px;
 color:#fff;
+margin-bottom:10px;
 }
 
-.card-text{
-color:#bbb;
-line-height:1.6;
-margin-bottom:25px;
-}
-
-.card a{
-color:var(--yellow);
+.card-watch{
+font-size:14px;
 font-weight:900;
-text-decoration:none;
+letter-spacing:2px;
+color:var(--yellow);
 }
 
 /* ABOUT */
@@ -175,17 +180,17 @@ text-decoration:none;
 max-width:900px;
 font-size:24px;
 line-height:1.8;
-color:#ddd;
+color:#000;
+font-weight:600;
 }
 
 /* FOOTER */
 
 footer{
 background:#000;
-border-top:1px solid #222;
+color:#666;
 text-align:center;
 padding:50px 20px;
-color:#666;
 font-weight:700;
 letter-spacing:3px;
 }
@@ -194,17 +199,16 @@ letter-spacing:3px;
 
 @media(max-width:1000px){
 
+.section{
+padding:50px 20px;
+}
+
 .title{
 font-size:64px;
 }
 
 .episode-layout{
 grid-template-columns:1fr;
-}
-
-.mascot{
-max-width:280px;
-margin:auto;
 }
 
 .archive-grid{
@@ -215,12 +219,17 @@ grid-template-columns:1fr;
 font-size:18px;
 }
 
-.section{
-padding:50px 20px;
+.player iframe{
+height:320px;
 }
 
-.player iframe{
-height:300px;
+.mascot{
+width:280px;
+}
+
+.btn{
+font-size:16px;
+padding:14px 24px;
 }
 
 }
@@ -233,18 +242,22 @@ height:300px;
 <div class="wrapper">
 
 <header class="hero">
+
 <img src="assets/banner.png" alt="TSS">
+
 </header>
 
 <section class="actions">
 
-<a class="btn"
+<a
+class="btn"
 href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
 target="_blank">
 🎧 LISTEN
 </a>
 
-<a class="btn"
+<a
+class="btn"
 href="https://www.youtube.com/@brzhezovsky"
 target="_blank">
 ▶ WATCH
@@ -257,7 +270,8 @@ target="_blank">
 <section class="section">
 
 <h2 class="title">
-LATEST<br>EPISODE
+LATEST<br>
+EPISODE
 </h2>
 
 <div class="episode-layout">
@@ -288,54 +302,107 @@ class="mascot">
 <section class="section">
 
 <h2 class="title">
-VIDEO<br>ARCHIVE
+VIDEO<br>
+ARCHIVE
 </h2>
 
 <div class="archive-grid">
 
-<div class="card">
-<div class="card-number">EP.001</div>
-<div class="card-title">Transcendence Sonic Sessions</div>
-<div class="card-text">
-Progressive House • Neo Trance • Electronic Music
-</div>
-<a href="https://youtu.be/kkoJiwkVasM" target="_blank">
-WATCH NOW →
-</a>
+<a class="card"
+href="https://youtu.be/kkoJiwkVasM"
+target="_blank">
+
+<img src="https://img.youtube.com/vi/kkoJiwkVasM/maxresdefault.jpg">
+
+<div class="card-info">
+
+<div class="card-number">
+EP.001
 </div>
 
-<div class="card">
-<div class="card-number">EP.002</div>
-<div class="card-title">Transcendence Sonic Sessions</div>
-<div class="card-text">
-House • UK Garage • Deep Electronic Grooves
-</div>
-<a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
-WATCH NOW →
-</a>
+<div class="card-title">
+Transcendence Sonic Sessions
 </div>
 
-<div class="card">
-<div class="card-number">EP.003</div>
-<div class="card-title">Transcendence Sonic Sessions</div>
-<div class="card-text">
-Neo Trance • Progressive Sounds • Club Culture
-</div>
-<a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
+<div class="card-watch">
 WATCH NOW →
-</a>
 </div>
 
-<div class="card">
-<div class="card-number">EP.004</div>
-<div class="card-title">Transcendence Sonic Sessions</div>
-<div class="card-text">
-Underground Electronic Music Selection
 </div>
-<a href="https://youtu.be/brRXk8YkTRA" target="_blank">
-WATCH NOW →
+
 </a>
+
+<a class="card"
+href="https://youtu.be/-Q7Fhe4g8fU"
+target="_blank">
+
+<img src="https://img.youtube.com/vi/-Q7Fhe4g8fU/maxresdefault.jpg">
+
+<div class="card-info">
+
+<div class="card-number">
+EP.002
 </div>
+
+<div class="card-title">
+Transcendence Sonic Sessions
+</div>
+
+<div class="card-watch">
+WATCH NOW →
+</div>
+
+</div>
+
+</a>
+
+<a class="card"
+href="https://youtu.be/gnoIBMJwM_8"
+target="_blank">
+
+<img src="https://img.youtube.com/vi/gnoIBMJwM_8/maxresdefault.jpg">
+
+<div class="card-info">
+
+<div class="card-number">
+EP.003
+</div>
+
+<div class="card-title">
+Transcendence Sonic Sessions
+</div>
+
+<div class="card-watch">
+WATCH NOW →
+</div>
+
+</div>
+
+</a>
+
+<a class="card"
+href="https://youtu.be/brRXk8YkTRA"
+target="_blank">
+
+<img src="https://img.youtube.com/vi/brRXk8YkTRA/maxresdefault.jpg">
+
+<div class="card-info">
+
+<div class="card-number">
+EP.004
+</div>
+
+<div class="card-title">
+Transcendence Sonic Sessions
+</div>
+
+<div class="card-watch">
+WATCH NOW →
+</div>
+
+</div>
+
+</a>
 
 </div>
 
@@ -344,18 +411,17 @@ WATCH NOW →
 <section class="section">
 
 <h2 class="title">
-ABOUT<br>TSS
+ABOUT<br>
+TSS
 </h2>
 
 <div class="about">
 
-Transcendence Sonic Sessions is a radio project dedicated to
-House, Progressive House, Neo Trance, UK Garage and modern
-underground electronic music.
+Transcendence Sonic Sessions is a radio project dedicated to House,
+Progressive House, Neo Trance, UK Garage and underground electronic music.
 
 Each episode explores melodic journeys, rave culture influences,
-club sounds and timeless electronic aesthetics curated by
-Brzhezovsky.
+club sounds and contemporary electronic aesthetics curated by Brzhezovsky.
 
 </div>
 
@@ -364,7 +430,9 @@ Brzhezovsky.
 </div>
 
 <footer>
+
 TRANSCENDENCE SONIC SESSIONS
+
 </footer>
 
 </div>
