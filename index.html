@@ -16,11 +16,18 @@ position:absolute;
 display:block;
 transition:all .25s ease;
 transform-origin:center;
+
+filter:
+drop-shadow(0 0 6px rgba(0,0,0,.18))
+drop-shadow(0 4px 12px rgba(0,0,0,.12));
 }
 
 .layer:hover{
 transform:translateY(-4px) scale(1.03);
-filter:drop-shadow(0 10px 20px rgba(0,0,0,.35));
+
+filter:
+drop-shadow(0 0 10px rgba(0,0,0,.22))
+drop-shadow(0 8px 24px rgba(0,0,0,.18));
 }
 
 /* HEADER */
@@ -46,7 +53,7 @@ width:40px;
 /* HERO */
 
 .hero-btn{
-left:683px;
+left:683.9px;
 top:546px;
 width:280px;
 }
