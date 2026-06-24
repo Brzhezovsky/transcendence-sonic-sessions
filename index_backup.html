@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSS | Transcendence Sonic Sessions</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--yellow:#ffd400;
+--black:#000;
+--dark:#111;
+--gray:#222;
+}
+
+body{
+background:#000;
+font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden;
+}
+
+.wrapper{
+max-width:1400px;
+margin:0 auto;
+background:var(--yellow);
+min-height:100vh;
+}
+
+/* HERO */
+
+.hero{
+padding:0;
+}
+
+.hero img{
+display:block;
+width:100%;
+height:auto;
+}
+
+/* BUTTONS */
+
+.actions{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:35px 20px 50px;
+}
+
+.btn{
+display:inline-block;
+background:#111;
+color:var(--yellow);
+text-decoration:none;
+padding:18px 34px;
+border-radius:999px;
+font-weight:900;
+font-size:20px;
+letter-spacing:1px;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* BLACK CONTENT AREA */
+
+.content{
+background:#000;
+padding-bottom:80px;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 50px;
+position:relative;
+}
+
+.title{
+font-size:110px;
+font-weight:900;
+line-height:.9;
+text-transform:uppercase;
+color:var(--yellow);
+margin-bottom:30px;
+}
+
+/* LATEST EPISODE */
+
+.episode-layout{
+display:grid;
+grid-template-columns:1fr 320px;
+gap:40px;
+align-items:start;
+}
+
+.player{
+background:#111;
+padding:20px;
+border-radius:24px;
+border:2px solid #222;
+}
+
+.player iframe{
+width:100%;
+height:450px;
+border:none;
+}
+
+.mascot{
+width:100%;
+display:block;
+}
+
+/* VIDEO ARCHIVE */
+
+.archive-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.card{
+background:#111;
+border:2px solid #222;
+border-radius:20px;
+padding:30px;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:var(--yellow);
+}
+
+.card-number{
+font-size:54px;
+font-weight:900;
+color:var(--yellow);
+margin-bottom:15px;
+}
+
+.card-title{
+font-size:22px;
+font-weight:900;
+margin-bottom:12px;
+color:#fff;
+}
+
+.card-text{
+color:#bbb;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.card a{
+color:var(--yellow);
+font-weight:900;
+text-decoration:none;
+}
+
+/* ABOUT */
+
+.about{
+max-width:900px;
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+border-top:1px solid #222;
+text-align:center;
+padding:50px 20px;
+color:#666;
+font-weight:700;
+letter-spacing:3px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.title{
+font-size:64px;
+}
+
+.episode-layout{
+grid-template-columns:1fr;
+}
+
+.mascot{
+max-width:280px;
+margin:auto;
+}
+
+.archive-grid{
+grid-template-columns:1fr;
+}
+
+.about{
+font-size:18px;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.player iframe{
+height:300px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header class="hero">
+<img src="assets/banner.png" alt="TSS">
+</header>
+
+<section class="actions">
+
+<a class="btn"
+href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
+target="_blank">
+🎧 LISTEN
+</a>
+
+<a class="btn"
+href="https://www.youtube.com/@brzhezovsky"
+target="_blank">
+▶ WATCH
+</a>
+
+</section>
+
+<div class="content">
+
+<section class="section">
+
+<h2 class="title">
+LATEST<br>EPISODE
+</h2>
+
+<div class="episode-layout">
+
+<div class="player">
+
+<iframe
+scrolling="no"
+allow="autoplay"
+src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions">
+</iframe>
+
+</div>
+
+<div>
+
+<img
+src="assets/mascot.png"
+alt="TSS Mascot"
+class="mascot">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+VIDEO<br>ARCHIVE
+</h2>
+
+<div class="archive-grid">
+
+<div class="card">
+<div class="card-number">EP.001</div>
+<div class="card-title">Transcendence Sonic Sessions</div>
+<div class="card-text">
+Progressive House • Neo Trance • Electronic Music
+</div>
+<a href="https://youtu.be/kkoJiwkVasM" target="_blank">
+WATCH NOW →
+</a>
+</div>
+
+<div class="card">
+<div class="card-number">EP.002</div>
+<div class="card-title">Transcendence Sonic Sessions</div>
+<div class="card-text">
+House • UK Garage • Deep Electronic Grooves
+</div>
+<a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
+WATCH NOW →
+</a>
+</div>
+
+<div class="card">
+<div class="card-number">EP.003</div>
+<div class="card-title">Transcendence Sonic Sessions</div>
+<div class="card-text">
+Neo Trance • Progressive Sounds • Club Culture
+</div>
+<a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
+WATCH NOW →
+</a>
+</div>
+
+<div class="card">
+<div class="card-number">EP.004</div>
+<div class="card-title">Transcendence Sonic Sessions</div>
+<div class="card-text">
+Underground Electronic Music Selection
+</div>
+<a href="https://youtu.be/brRXk8YkTRA" target="_blank">
+WATCH NOW →
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+ABOUT<br>TSS
+</h2>
+
+<div class="about">
+
+Transcendence Sonic Sessions is a radio project dedicated to
+House, Progressive House, Neo Trance, UK Garage and modern
+underground electronic music.
+
+Each episode explores melodic journeys, rave culture influences,
+club sounds and timeless electronic aesthetics curated by
+Brzhezovsky.
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+TRANSCENDENCE SONIC SESSIONS
+</footer>
+
+</div>
+
+</body>
+</html>
