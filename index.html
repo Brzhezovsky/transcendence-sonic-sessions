@@ -7,9 +7,7 @@
 <title>Transcendence Sonic Sessions | Brzhezovsky | KURS Radio</title>
 
 <meta name="description" content="Transcendence Sonic Sessions by Brzhezovsky. Monthly radio show on KURS Radio featuring Progressive House, Neo Trance, UK Garage and underground electronic music.">
-
 <meta name="keywords" content="Brzhezovsky, Transcendence Sonic Sessions, KURS Radio, Progressive House, Neo Trance, UK Garage, Electronic Music, Radio Show">
-
 <meta name="author" content="Brzhezovsky">
 
 <link rel="canonical" href="https://brzhezovsky.github.io/transcendence-sonic-sessions/">
@@ -30,215 +28,6 @@ body{background:#000;font-family:Arial,Helvetica,sans-serif;}
 .site{position:relative;max-width:1024px;margin:0 auto;}
 .background{display:block;width:100%;height:auto;}
 
-.layer{
-position:absolute;
-display:block;
-transition:all .25s ease;
-transform-origin:center;
-
-filter:
-drop-shadow(0 0 6px rgba(0,0,0,.18))
-drop-shadow(0 4px 12px rgba(0,0,0,.12));
-}
-
-.layer:hover{
-transform:translateY(-4px) scale(1.03);
-
-filter:
-drop-shadow(0 0 10px rgba(0,0,0,.22))
-drop-shadow(0 8px 24px rgba(0,0,0,.18));
-}
-
-/* HEADER */
-
-.instagram{
-left:752px;
-top:316px;
-width:232px;
-}
-
-.sc-small{
-left:879px;
-top:365px;
-width:39px;
-}
-
-.yt-small{
-left:936px;
-top:364px;
-width:40px;
-}
-
-/* HERO */
-
-.hero-btn{
-left:683.9px;
-top:546px;
-width:280px;
-}
-
-/* PLAYERS */
-
-.all-shows{
-left:38px;
-top:772px;
-width:452px;
-}
-
-.all-videos{
-left:518px;
-top:772px;
-width:468px;
-}
-
-/* BUTTONS */
-
-.listen-btn{
-left:129px;
-top:990px;
-width:251px;
-}
-
-.watch-btn{
-left:610px;
-top:991px;
-width:240px;
-}
-
-/* EPISODES */
-
-.ep1{
-left:40px;
-top:1077px;
-width:234px;
-}
-
-.ep2{
-left:275px;
-top:1075px;
-width:234px;
-}
-
-.ep3{
-left:510px;
-top:1075px;
-width:234px;
-}
-
-.ep4{
-left:749px;
-top:1075px;
-width:234px;
-}
-
-/* VIEW ALL */
-
-.view-all{
-left:800px;
-top:1251px;
-width:183px;
-}
-
-/* STAY TUNED */
-
-.stay-tuned{
-left:782px;
-top:1330px;
-width:200px;
-}
-
-/* MOBILE */
-
-@media(max-width:1024px){
-
-.layer{
-transform-origin:center;
-}
-
-.instagram{
-left:73.2%;
-top:20.7%;
-width:22.7%;
-}
-
-.sc-small{
-left:85.9%;
-top:23.9%;
-width:3.8%;
-}
-
-.yt-small{
-left:91.7%;
-top:23.8%;
-width:3.5%;
-}
-
-.hero-btn{
-left:66.7%;
-top:35.6%;
-width:27.3%;
-}
-
-.all-shows{
-left:3.6%;
-top:50.4%;
-width:44.1%;
-}
-
-.all-videos{
-left:50.6%;
-top:50.4%;
-width:45.7%;
-}
-
-.listen-btn{
-left:12.7%;
-top:64.5%;
-width:24.5%;
-}
-
-.watch-btn{
-left:59.4%;
-top:64.6%;
-width:23.5%;
-}
-
-.ep1{
-left:3.9%;
-top:70.2%;
-width:22.8%;
-}
-
-.ep2{
-left:26.8%;
-top:70.2%;
-width:22.8%;
-}
-
-.ep3{
-left:49.8%;
-top:70.2%;
-width:22.8%;
-}
-
-.ep4{
-left:73.1%;
-top:70.2%;
-width:22.8%;
-}
-
-.view-all{
-left:78.2%;
-top:81.5%;
-width:17.8%;
-}
-
-.stay-tuned{
-left:76.4%;
-top:86.6%;
-width:19.5%;
-}
-
 .seo-content{
 position:absolute;
 left:-9999px;
@@ -248,102 +37,245 @@ height:1px;
 overflow:hidden;
 }
 
+.layer{
+position:absolute;
+display:block;
+transition:all .25s ease;
+transform-origin:center;
+filter:drop-shadow(0 0 6px rgba(0,0,0,.18)) drop-shadow(0 4px 12px rgba(0,0,0,.12));
+}
+
+.layer:hover{
+transform:translateY(-4px) scale(1.03);
+filter:drop-shadow(0 0 10px rgba(0,0,0,.22)) drop-shadow(0 8px 24px rgba(0,0,0,.18));
+}
+
+.show-wrap{
+position:absolute;
+display:block;
+overflow:hidden;
+border-radius:6px;
+cursor:pointer;
+}
+
+.show-wrap img{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+transition:.35s ease;
+pointer-events:none;
+}
+
+.show-hover{opacity:0;}
+.show-wrap:hover .show-default{opacity:0;transform:scale(1.05);}
+.show-wrap:hover .show-hover{opacity:1;transform:scale(1.05);}
+
+.episode{
+position:absolute;
+display:block;
+overflow:hidden;
+border-radius:6px;
+cursor:pointer;
+}
+
+.episode img{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+transition:.35s ease;
+pointer-events:none;
+object-fit:cover;
+}
+
+.episode-hover{opacity:0;}
+.episode:hover .episode-default{opacity:0;transform:scale(1.05);}
+.episode:hover .episode-hover{opacity:1;transform:scale(1.05);}
+
+.instagram{left:752px;top:316px;width:232px;}
+.sc-small{left:879px;top:365px;width:39px;}
+.yt-small{left:936px;top:364px;width:40px;}
+.hero-btn{left:683.9px;top:546px;width:280px;}
+
+.all-shows{
+left:38px;
+top:772px;
+width:452px;
+height:212px;
+aspect-ratio:452/212;
+}
+
+.show-videos{
+left:518px;
+top:772px;
+width:468px;
+height:213px;
+aspect-ratio:468/213;
+}
+
+.listen-btn{left:129px;top:990px;width:251px;}
+.watch-btn{left:610px;top:991px;width:240px;}
+
+.ep1{left:40px;top:1077px;width:234px;height:129px;}
+.ep2{left:275px;top:1075px;width:234px;height:129px;}
+.ep3{left:510px;top:1075px;width:234px;height:129px;}
+.ep4{left:749px;top:1075px;width:234px;height:129px;}
+
+.view-all{left:800px;top:1251px;width:183px;}
+.stay-tuned{left:782px;top:1330px;width:200px;}
+
+@media(max-width:1024px){
+
+.layer{transform-origin:center;}
+
+.instagram{left:73.2%;top:20.7%;width:22.7%;}
+.sc-small{left:85.9%;top:23.9%;width:3.8%;}
+.yt-small{left:91.7%;top:23.8%;width:3.5%;}
+.hero-btn{left:66.7%;top:35.6%;width:27.3%;}
+
+.all-shows{
+left:3.6%;
+top:50.4%;
+width:44.1%;
+height:auto;
+aspect-ratio:452/212;
+}
+
+.show-videos{
+left:50.6%;
+top:50.4%;
+width:45.7%;
+height:auto;
+aspect-ratio:468/213;
+}
+
+.listen-btn{left:12.7%;top:64.5%;width:24.5%;}
+.watch-btn{left:59.4%;top:64.6%;width:23.5%;}
+
+.ep1{left:3.9%;top:70.2%;width:22.8%;height:auto;aspect-ratio:234/129;}
+.ep2{left:26.8%;top:70.2%;width:22.8%;height:auto;aspect-ratio:234/129;}
+.ep3{left:49.8%;top:70.2%;width:22.8%;height:auto;aspect-ratio:234/129;}
+.ep4{left:73.1%;top:70.2%;width:22.8%;height:auto;aspect-ratio:234/129;}
+
+.view-all{left:78.2%;top:81.5%;width:17.8%;}
+.stay-tuned{left:76.4%;top:86.6%;width:19.5%;}
+
 }
 </style>
 </head>
+<body>
+
 <audio id="hoverSound" preload="auto">
   <source src="assets/hover.mp3" type="audio/mpeg">
 </audio>
-<body>
 
 <div class="site">
 
-<img src="assets/background.png" alt="Transcendence Sonic Sessions" class="background">
+  <img src="assets/background.png" alt="Transcendence Sonic Sessions" class="background">
 
-<a href="https://www.instagram.com/brzhezovsky" target="_blank">
-<img src="assets/Instagramm.png" class="layer instagram">
-</a>
+  <!-- HEADER -->
+  <a href="https://www.instagram.com/brzhezovsky" target="_blank">
+    <img src="assets/Instagramm.png" class="layer instagram" alt="Instagram">
+  </a>
 
-<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
-<img src="assets/small-all-shows.png" class="layer sc-small">
-</a>
+  <a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+    <img src="assets/small-all-shows.png" class="layer sc-small" alt="SoundCloud">
+  </a>
 
-<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
-<img src="assets/small-all-videos.png" class="layer yt-small">
-</a>
+  <a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+    <img src="assets/small-all-videos.png" class="layer yt-small" alt="YouTube">
+  </a>
 
-<a href="https://soundcloud.com/kurs_radio/transcendence-sonic-sessions-2" target="_blank">
-<img src="assets/hero-button.png" class="layer hero-btn">
-</a>
+  <!-- HERO -->
+  <a href="https://soundcloud.com/kurs_radio/transcendence-sonic-sessions-2" target="_blank">
+    <img src="assets/hero-button.png" class="layer hero-btn" alt="Listen on KURS Radio">
+  </a>
 
-<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
-<img src="assets/all-shows.png" class="layer all-shows">
-</a>
+  <!-- SC PLAYER — hover swap -->
+  <a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+    <div class="show-wrap all-shows">
+      <img src="assets/all-shows.png" class="show-default" alt="All Shows on SoundCloud">
+      <img src="assets/latest-show.png" class="show-hover" alt="Latest Show">
+    </div>
+  </a>
 
-<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
-<img src="assets/all-videos.png" class="layer all-videos">
-</a>
+  <!-- YT PLAYER — hover swap -->
+  <a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+    <div class="show-wrap show-videos">
+      <img src="assets/all-videos.png" class="show-default" alt="All Videos on YouTube">
+      <img src="https://img.youtube.com/vi/-Q7Fhe4g8fU/hqdefault.jpg" class="show-hover" alt="Latest Video Preview">
+    </div>
+  </a>
 
-<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
-<img src="assets/listen-btn.png" class="layer listen-btn">
-</a>
+  <!-- BUTTONS -->
+  <a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+    <img src="assets/listen-btn.png" class="layer listen-btn" alt="Listen">
+  </a>
 
-<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
-<img src="assets/watch-btn.png" class="layer watch-btn">
-</a>
+  <a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+    <img src="assets/watch-btn.png" class="layer watch-btn" alt="Watch">
+  </a>
 
-<a href="https://youtu.be/kkoJiwkVasM" target="_blank">
-<img src="assets/ep1.png" class="layer ep1">
-</a>
+  <!-- EPISODES — hover swap на YouTube thumbnails -->
+  <a href="https://youtu.be/kkoJiwkVasM" target="_blank">
+    <div class="episode ep1">
+      <img src="assets/ep1.png" class="episode-default" alt="Episode 1">
+      <img src="https://img.youtube.com/vi/kkoJiwkVasM/hqdefault.jpg" class="episode-hover" alt="Episode 1 Preview">
+    </div>
+  </a>
 
-<a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
-<img src="assets/ep2.png" class="layer ep2">
-</a>
+  <a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
+    <div class="episode ep2">
+      <img src="assets/ep2.png" class="episode-default" alt="Episode 2">
+      <img src="https://img.youtube.com/vi/-Q7Fhe4g8fU/hqdefault.jpg" class="episode-hover" alt="Episode 2 Preview">
+    </div>
+  </a>
 
-<a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
-<img src="assets/ep3.png" class="layer ep3">
-</a>
+  <a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
+    <div class="episode ep3">
+      <img src="assets/ep3.png" class="episode-default" alt="Episode 3">
+      <img src="https://img.youtube.com/vi/gnoIBMJwM_8/hqdefault.jpg" class="episode-hover" alt="Episode 3 Preview">
+    </div>
+  </a>
 
-<a href="https://youtu.be/brRXk8YkTRA" target="_blank">
-<img src="assets/ep4.png" class="layer ep4">
-</a>
+  <a href="https://youtu.be/brRXk8YkTRA" target="_blank">
+    <div class="episode ep4">
+      <img src="assets/ep4.png" class="episode-default" alt="Episode 4">
+      <img src="https://img.youtube.com/vi/brRXk8YkTRA/hqdefault.jpg" class="episode-hover" alt="Episode 4 Preview">
+    </div>
+  </a>
 
-<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
-<img src="assets/all-videos-slim.png" class="layer view-all">
-</a>
+  <!-- VIEW ALL / STAY TUNED -->
+  <a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+    <img src="assets/all-videos-slim.png" class="layer view-all" alt="View All Videos">
+  </a>
 
-<a href="https://t.me/brzhezovsky" target="_blank">
-<img src="assets/stay-tuned.png" class="layer stay-tuned">
-</a>
+  <a href="https://t.me/brzhezovsky" target="_blank">
+    <img src="assets/stay-tuned.png" class="layer stay-tuned" alt="Stay Tuned on Telegram">
+  </a>
 
 </div>
+
 <div class="seo-content">
-
-<h1>Transcendence Sonic Sessions</h1>
-
-<p>
-Transcendence Sonic Sessions is a monthly radio show by Brzhezovsky on KURS Radio featuring Progressive House, Neo Trance, UK Garage and modern underground electronic music.
-</p>
-
-<p>
-The project explores contemporary electronic music inspired by the cultural code of underground club scenes from the 1990s and 2000s.
-</p>
+  <h1>Transcendence Sonic Sessions</h1>
+  <p>Transcendence Sonic Sessions is a monthly radio show by Brzhezovsky on KURS Radio featuring Progressive House, Neo Trance, UK Garage and modern underground electronic music.</p>
+  <p>The project explores contemporary electronic music inspired by the cultural code of underground club scenes from the 1990s and 2000s.</p>
 </div>
-</body>
+
 <script>
 const hoverSound = document.getElementById('hoverSound');
 
-document.querySelectorAll('.layer').forEach(el => {
-
+document.querySelectorAll('.layer, .show-wrap, .episode').forEach(el => {
   el.addEventListener('mouseenter', () => {
-
     hoverSound.currentTime = 0;
     hoverSound.volume = 0.08;
-
     hoverSound.play().catch(() => {});
-
   });
-
 });
 </script>
+
+</body>
 </html>
