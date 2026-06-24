@@ -251,6 +251,9 @@ overflow:hidden;
 }
 </style>
 </head>
+<audio id="hoverSound" preload="auto">
+  <source src="assets/hover.mp3" type="audio/mpeg">
+</audio>
 <body>
 
 <div class="site">
@@ -327,4 +330,20 @@ The project explores contemporary electronic music inspired by the cultural code
 </p>
 </div>
 </body>
+<script>
+const hoverSound = document.getElementById('hoverSound');
+
+document.querySelectorAll('.layer').forEach(el => {
+
+  el.addEventListener('mouseenter', () => {
+
+    hoverSound.currentTime = 0;
+    hoverSound.volume = 0.08;
+
+    hoverSound.play().catch(() => {});
+
+  });
+
+});
+</script>
 </html>
