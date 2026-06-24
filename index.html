@@ -18,147 +18,220 @@ background:#000;
 font-family:Arial,Helvetica,sans-serif;
 }
 
-.poster-container{
+.site{
 position:relative;
 max-width:1024px;
 margin:0 auto;
 }
 
-.poster{
+.background{
 display:block;
 width:100%;
 height:auto;
 }
 
-.hotspot{
+.layer{
 position:absolute;
 display:block;
-z-index:10;
-cursor:pointer;
-background:transparent;
+transition:all .25s ease;
+transform-origin:center;
 }
 
-.hotspot:hover{
-background:rgba(255,255,255,.06);
-border-radius:12px;
+.layer:hover{
+transform:translateY(-4px) scale(1.03);
+filter:drop-shadow(0 10px 20px rgba(0,0,0,.35));
 }
 
-/* INSTAGRAM */
+/* HEADER */
 
-.host-instagram{
-left:73%;
-top:20%;
-width:23%;
-height:3%;
+.instagram{
+left:751px;
+top:349px;
+width:232px;
 }
 
-/* HEADER ICONS */
-
-.sc-icon{
-left:87%;
-top:23.7%;
-width:2.8%;
-height:2.8%;
+.sc-small{
+left:878px;
+top:397px;
+width:39px;
 }
 
-.yt-icon{
-left:93%;
-top:23.7%;
-width:2.8%;
-height:2.8%;
+.yt-small{
+left:936px;
+top:397px;
+width:40px;
 }
 
-/* LISTEN NOW */
+/* HERO */
 
-.hero{
-left:69%;
-top:33.5%;
-width:20%;
-height:6%;
+.hero-btn{
+left:682px;
+top:547px;
+width:280px;
 }
 
-/* ALL SHOWS */
+/* PLAYERS */
 
-.latest-episode{
-left:4%;
-top:51%;
-width:44%;
-height:8.5%;
+.all-shows{
+left:38px;
+top:776px;
+width:452px;
 }
 
-/* ALL VIDEOS */
-
-.latest-video{
-left:51%;
-top:51%;
-width:45%;
-height:8.5%;
+.all-videos{
+left:518px;
+top:776px;
+width:468px;
 }
 
-/* LISTEN BUTTON */
+/* BUTTONS */
 
 .listen-btn{
-left:12%;
-top:64.5%;
-width:26%;
-height:3%;
+left:128px;
+top:991px;
+width:251px;
 }
-
-/* WATCH BUTTON */
 
 .watch-btn{
-left:60%;
-top:64.5%;
-width:26%;
-height:3%;
+left:609px;
+top:991px;
+width:240px;
 }
 
-/* VIDEO EPISODES */
+/* EPISODES */
 
 .ep1{
-left:2%;
-top:69.8%;
-width:23%;
-height:6.2%;
+left:40px;
+top:1077px;
+width:234px;
 }
 
 .ep2{
-left:26%;
-top:69.8%;
-width:23%;
-height:6.2%;
+left:275px;
+top:1077px;
+width:234px;
 }
 
 .ep3{
-left:50%;
-top:69.8%;
-width:23%;
-height:6.2%;
+left:510px;
+top:1077px;
+width:234px;
 }
 
 .ep4{
-left:74%;
-top:69.8%;
-width:23%;
-height:6.2%;
+left:745px;
+top:1077px;
+width:234px;
 }
 
-/* VIEW ALL VIDEOS */
+/* VIEW ALL */
 
-.all-videos-btn{
-left:77.5%;
-top:80.8%;
-width:18.5%;
-height:3.2%;
+.view-all{
+left:799px;
+top:1253px;
+width:183px;
 }
 
-/* TELEGRAM */
+/* STAY TUNED */
 
-.telegram{
+.stay-tuned{
+left:782px;
+top:1330px;
+width:200px;
+}
+
+/* MOBILE */
+
+@media(max-width:1024px){
+
+.layer{
+transform-origin:center;
+}
+
+.instagram{
+left:73.3%;
+top:22.7%;
+width:22.7%;
+}
+
+.sc-small{
+left:85.7%;
+top:25.8%;
+width:3.8%;
+}
+
+.yt-small{
+left:91.4%;
+top:25.8%;
+width:3.9%;
+}
+
+.hero-btn{
+left:66.6%;
+top:35.6%;
+width:27.3%;
+}
+
+.all-shows{
+left:3.7%;
+top:50.5%;
+width:44.1%;
+}
+
+.all-videos{
+left:50.6%;
+top:50.5%;
+width:45.7%;
+}
+
+.listen-btn{
+left:12.5%;
+top:64.5%;
+width:24.5%;
+}
+
+.watch-btn{
+left:59.4%;
+top:64.5%;
+width:23.4%;
+}
+
+.ep1{
+left:3.9%;
+top:70.1%;
+width:22.8%;
+}
+
+.ep2{
+left:26.8%;
+top:70.1%;
+width:22.8%;
+}
+
+.ep3{
+left:49.8%;
+top:70.1%;
+width:22.8%;
+}
+
+.ep4{
+left:72.7%;
+top:70.1%;
+width:22.8%;
+}
+
+.view-all{
 left:78%;
-top:87%;
-width:18%;
-height:10%;
+top:81.6%;
+width:17.8%;
+}
+
+.stay-tuned{
+left:76.3%;
+top:86.6%;
+width:19.5%;
+}
+
 }
 
 </style>
@@ -166,110 +239,68 @@ height:10%;
 
 <body>
 
-<div class="poster-container">
+<div class="site">
 
 <img
-src="assets/poster.png"
+src="assets/background.png"
 alt="Transcendence Sonic Sessions"
-class="poster">
+class="background">
 
-<!-- BRZHEZOVSKY -->
+<a href="https://www.instagram.com/brzhezovsky" target="_blank">
+<img src="assets/Instagramm.png" class="layer instagram">
+</a>
 
-<a
-class="hotspot host-instagram"
-href="https://www.instagram.com/brzhezovsky"
-target="_blank"></a>
+<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+<img src="assets/small-all-shows.png" class="layer sc-small">
+</a>
 
-<!-- SOUNDCLOUD ICON -->
+<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+<img src="assets/small-all-videos.png" class="layer yt-small">
+</a>
 
-<a
-class="hotspot sc-icon"
-href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
-target="_blank"></a>
+<a href="https://soundcloud.com/kurs_radio/transcendence-sonic-sessions-2" target="_blank">
+<img src="assets/hero-button.png" class="layer hero-btn">
+</a>
 
-<!-- YOUTUBE ICON -->
+<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+<img src="assets/all-shows.png" class="layer all-shows">
+</a>
 
-<a
-class="hotspot yt-icon"
-href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-target="_blank"></a>
+<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+<img src="assets/all-videos.png" class="layer all-videos">
+</a>
 
-<!-- LISTEN NOW -->
+<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">
+<img src="assets/listen-btn.png" class="layer listen-btn">
+</a>
 
-<a
-class="hotspot hero"
-href="https://soundcloud.com/kurs_radio/transcendence-sonic-sessions-2"
-target="_blank"></a>
+<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+<img src="assets/watch-btn.png" class="layer watch-btn">
+</a>
 
-<!-- ALL SHOWS -->
+<a href="https://youtu.be/kkoJiwkVasM" target="_blank">
+<img src="assets/ep1.png" class="layer ep1">
+</a>
 
-<a
-class="hotspot latest-episode"
-href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
-target="_blank"></a>
+<a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
+<img src="assets/ep2.png" class="layer ep2">
+</a>
 
-<!-- ALL VIDEOS -->
+<a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
+<img src="assets/ep3.png" class="layer ep3">
+</a>
 
-<a
-class="hotspot latest-video"
-href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-target="_blank"></a>
+<a href="https://youtu.be/brRXk8YkTRA" target="_blank">
+<img src="assets/ep4.png" class="layer ep4">
+</a>
 
-<!-- LISTEN BUTTON -->
+<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">
+<img src="assets/all-videos-slim.png" class="layer view-all">
+</a>
 
-<a
-class="hotspot listen-btn"
-href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
-target="_blank"></a>
-
-<!-- WATCH BUTTON -->
-
-<a
-class="hotspot watch-btn"
-href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-target="_blank"></a>
-
-<!-- VIDEO 1 -->
-
-<a
-class="hotspot ep1"
-href="https://youtu.be/kkoJiwkVasM"
-target="_blank"></a>
-
-<!-- VIDEO 2 -->
-
-<a
-class="hotspot ep2"
-href="https://youtu.be/-Q7Fhe4g8fU"
-target="_blank"></a>
-
-<!-- VIDEO 3 -->
-
-<a
-class="hotspot ep3"
-href="https://youtu.be/gnoIBMJwM_8"
-target="_blank"></a>
-
-<!-- VIDEO 4 -->
-
-<a
-class="hotspot ep4"
-href="https://youtu.be/brRXk8YkTRA"
-target="_blank"></a>
-
-<!-- VIEW ALL VIDEOS -->
-
-<a
-class="hotspot all-videos-btn"
-href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-target="_blank"></a>
-
-<!-- TELEGRAM -->
-
-<a
-class="hotspot telegram"
-href="https://t.me/brzhezovsky"
-target="_blank"></a>
+<a href="https://t.me/brzhezovsky" target="_blank">
+<img src="assets/stay-tuned.png" class="layer stay-tuned">
+</a>
 
 </div>
 
