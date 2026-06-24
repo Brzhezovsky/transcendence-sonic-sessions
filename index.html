@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,231 +14,128 @@ padding:0;
 box-sizing:border-box;
 }
 
-:root{
---yellow:#ffd400;
---black:#000;
---dark:#111;
-}
-
 body{
 background:#000;
 font-family:Arial,Helvetica,sans-serif;
-overflow-x:hidden;
 }
 
-.wrapper{
-max-width:1400px;
+.poster-container{
+position:relative;
+max-width:1024px;
 margin:0 auto;
-background:var(--yellow);
-min-height:100vh;
 }
 
-.hero img{
+.poster{
 display:block;
 width:100%;
 height:auto;
 }
 
-.section{
-padding:80px 40px;
-}
-
-.block-title{
-font-size:72px;
-font-weight:900;
-text-transform:uppercase;
-line-height:.9;
-margin-bottom:30px;
-color:#000;
-}
-
-.visual-player iframe{
-width:100%;
-height:560px;
-border:none;
-border-radius:20px;
-}
-
-.manifest-row{
-display:grid;
-grid-template-columns:1fr 320px;
-gap:40px;
-align-items:center;
-}
-
-.manifest-box{
-border-top:4px solid #000;
-border-bottom:4px solid #000;
-padding:40px 0;
-}
-
-.manifest-box h2{
-font-size:48px;
-font-weight:900;
-margin-bottom:20px;
-text-transform:uppercase;
-}
-
-.manifest-box p{
-font-size:22px;
-line-height:1.8;
-}
-
-.hosted{
-margin-top:25px;
-font-size:18px;
-font-weight:900;
-letter-spacing:2px;
-}
-
-.mascot{
-width:100%;
-max-width:320px;
+.hotspot{
+position:absolute;
 display:block;
-margin:auto;
-transform:rotate(-3deg);
+z-index:10;
+cursor:pointer;
 }
 
-.archive-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:20px;
+/* Uncomment for debugging hotspots */
+/*
+.hotspot{
+background:rgba(255,0,0,.25);
+}
+*/
+
+/* HERO BUTTON */
+.hero{
+left:12%;
+top:17%;
+width:76%;
+height:12%;
 }
 
-.archive{
-background:#111;
-padding:20px;
-border-radius:20px;
+/* ALL SHOWS */
+.latest-episode{
+left:7%;
+top:43%;
+width:40%;
+height:12%;
 }
 
-.archive h3{
-font-size:28px;
-margin-bottom:15px;
-color:#ffd400;
-text-transform:uppercase;
+/* ALL VIDEOS */
+.latest-video{
+right:7%;
+top:43%;
+width:40%;
+height:12%;
 }
 
-.archive iframe{
-width:100%;
-height:500px;
-border:none;
+/* LISTEN */
+.listen-btn{
+left:10%;
+top:61%;
+width:34%;
+height:5%;
 }
 
-.big-links{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-margin-top:40px;
+/* WATCH */
+.watch-btn{
+right:10%;
+top:61%;
+width:34%;
+height:5%;
 }
 
-.big-links a{
-display:flex;
-align-items:center;
-justify-content:center;
-background:#000;
-color:#ffd400;
-text-decoration:none;
-height:80px;
-width:65%;
-margin:0 auto;
-border-radius:50px;
-font-size:22px;
-font-weight:900;
-text-transform:uppercase;
-transition:.2s;
+/* VIDEO PREVIEWS */
+.ep1{
+left:6%;
+top:69%;
+width:20%;
+height:10%;
 }
 
-.big-links a:hover{
-transform:translateY(-2px);
+.ep2{
+left:28%;
+top:69%;
+width:20%;
+height:10%;
 }
 
-.video-thumbs{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-margin-top:50px;
+.ep3{
+left:50%;
+top:69%;
+width:20%;
+height:10%;
 }
 
-.video-thumbs img{
-width:100%;
-display:block;
-border:4px solid #000;
-transition:.2s;
+.ep4{
+left:72%;
+top:69%;
+width:20%;
+height:10%;
 }
 
-.video-thumbs img:hover{
-transform:translateY(-3px);
+/* TELEGRAM */
+.telegram{
+left:65%;
+top:93%;
+width:24%;
+height:4%;
 }
 
-.socials{
-margin-top:60px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+/* SOUNDCLOUD ICON */
+.soundcloud{
+left:6%;
+top:93%;
+width:10%;
+height:4%;
 }
 
-.socials a{
-background:#000;
-color:#ffd400;
-text-decoration:none;
-padding:14px 20px;
-font-weight:900;
-letter-spacing:1px;
-}
-
-footer{
-background:#000;
-color:#777;
-text-align:center;
-padding:30px;
-font-size:14px;
-letter-spacing:3px;
-}
-
-@media(max-width:1000px){
-
-.section{
-padding:50px 20px;
-}
-
-.block-title{
-font-size:48px;
-}
-
-.manifest-row{
-grid-template-columns:1fr;
-}
-
-.manifest-box h2{
-font-size:32px;
-}
-
-.manifest-box p{
-font-size:18px;
-}
-
-.archive-grid{
-grid-template-columns:1fr;
-}
-
-.big-links{
-grid-template-columns:1fr;
-}
-
-.big-links a{
-width:100%;
-}
-
-.video-thumbs{
-grid-template-columns:1fr 1fr;
-}
-
-.visual-player iframe{
-height:420px;
-}
-
+/* YOUTUBE ICON */
+.youtube{
+left:18%;
+top:93%;
+width:10%;
+height:4%;
 }
 
 </style>
@@ -245,150 +143,84 @@ height:420px;
 
 <body>
 
-<div class="wrapper">
-
-<header class="hero">
-<img src="assets/banner.png" alt="Transcendence Sonic Sessions">
-</header>
-
-<section class="section">
-
-<div class="block-title">
-LATEST<br>BROADCAST
-</div>
-
-<div class="visual-player">
-
-<iframe
-scrolling="no"
-frameborder="no"
-allow="autoplay; encrypted-media"
-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/kurs_radio/transcendence-sonic-sessions-2&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-</iframe>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="manifest-row">
-
-<div class="manifest-box">
-
-<h2>
-Not retro. Not nostalgia.
-</h2>
-
-<p>
-A modern perspective on underground music heritage.
-
-Transcendence Sonic Sessions connects contemporary electronic music with the cultural code of the club scenes that defined the 1990s and 2000s — where Progressive House, Neo Trance, UK Garage and rave culture continue to evolve into something new.
-</p>
-
-<div class="hosted">
-HOSTED BY BRZHEZOVSKY • MONTHLY ON KURS RADIO
-</div>
-
-</div>
-
-<div>
+<div class="poster-container">
 
 <img
-src="assets/mascot.png"
-alt="TSS Mascot"
-class="mascot">
+src="assets/poster.png"
+alt="Transcendence Sonic Sessions"
+class="poster">
 
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="archive-grid">
-
-<div class="archive">
-
-<h3>ALL SHOWS</h3>
-
-<iframe
-scrolling="no"
-allow="autoplay"
-src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions">
-</iframe>
-
-</div>
-
-<div class="archive">
-
-<h3>ALL VIDEOS</h3>
-
-<iframe
-src="https://www.youtube.com/embed/videoseries?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-<div class="big-links">
-
+<!-- HERO -->
 <a
+class="hotspot hero"
+href="https://soundcloud.com/kurs_radio/transcendence-sonic-sessions-2"
+target="_blank"></a>
+
+<!-- ALL SHOWS -->
+<a
+class="hotspot latest-episode"
 href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
-target="_blank">
-LISTEN ON SOUNDCLOUD
-</a>
+target="_blank"></a>
 
+<!-- ALL VIDEOS -->
 <a
+class="hotspot latest-video"
 href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
-target="_blank">
-WATCH ON YOUTUBE
-</a>
+target="_blank"></a>
 
-</div>
+<!-- LISTEN -->
+<a
+class="hotspot listen-btn"
+href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions"
+target="_blank"></a>
 
-<div class="video-thumbs">
+<!-- WATCH -->
+<a
+class="hotspot watch-btn"
+href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
+target="_blank"></a>
 
-<a href="https://youtu.be/kkoJiwkVasM" target="_blank">
-<img src="https://img.youtube.com/vi/kkoJiwkVasM/hqdefault.jpg">
-</a>
+<!-- VIDEO 1 -->
+<a
+class="hotspot ep1"
+href="https://youtu.be/kkoJiwkVasM"
+target="_blank"></a>
 
-<a href="https://youtu.be/-Q7Fhe4g8fU" target="_blank">
-<img src="https://img.youtube.com/vi/-Q7Fhe4g8fU/hqdefault.jpg">
-</a>
+<!-- VIDEO 2 -->
+<a
+class="hotspot ep2"
+href="https://youtu.be/-Q7Fhe4g8fU"
+target="_blank"></a>
 
-<a href="https://youtu.be/gnoIBMJwM_8" target="_blank">
-<img src="https://img.youtube.com/vi/gnoIBMJwM_8/hqdefault.jpg">
-</a>
+<!-- VIDEO 3 -->
+<a
+class="hotspot ep3"
+href="https://youtu.be/gnoIBMJwM_8"
+target="_blank"></a>
 
-<a href="https://youtu.be/brRXk8YkTRA" target="_blank">
-<img src="https://img.youtube.com/vi/brRXk8YkTRA/hqdefault.jpg">
-</a>
+<!-- VIDEO 4 -->
+<a
+class="hotspot ep4"
+href="https://youtu.be/brRXk8YkTRA"
+target="_blank"></a>
 
-</div>
+<!-- TELEGRAM -->
+<a
+class="hotspot telegram"
+href="https://t.me/brzhezovsky"
+target="_blank"></a>
 
-<div class="socials">
+<!-- SOUNDCLOUD -->
+<a
+class="hotspot soundcloud"
+href="https://soundcloud.com/brzhezovsky"
+target="_blank"></a>
 
-<a href="https://soundcloud.com/brzhezovsky/sets/transcendence-sonic-sessions" target="_blank">SOUNDCLOUD</a>
-
-<a href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn" target="_blank">YOUTUBE</a>
-
-<a href="https://t.me/brzhezovsky" target="_blank">TELEGRAM</a>
-
-<a href="https://www.instagram.com/brzhezovsky" target="_blank">INSTAGRAM</a>
-
-<a href="https://kursradio.live" target="_blank">KURS RADIO</a>
-
-</div>
-
-</section>
-
-<footer>
-TRANSCENDENCE SONIC SESSIONS
-</footer>
+<!-- YOUTUBE -->
+<a
+class="hotspot youtube"
+href="https://www.youtube.com/playlist?list=PLMBs-EDaJGFT-NvBheYJKWEufwl-X_2qn"
+target="_blank"></a>
 
 </div>
 
