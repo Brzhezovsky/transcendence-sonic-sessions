@@ -164,6 +164,61 @@ aspect-ratio:468/213;
 .stay-tuned{left:76.4%;top:86.6%;width:19.5%;}
 
 }
+
+/* ── AUDIO BAR ── */
+#audio-bar{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:9999;
+  background:#111;
+  border-top:2px solid #FFE600;
+  display:flex;
+  align-items:center;
+  height:42px;
+  padding:0 14px;
+  gap:12px;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+#mute-btn{
+  background:none;
+  border:none;
+  cursor:pointer;
+  flex-shrink:0;
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  padding:0;
+  transition:opacity .2s;
+}
+#mute-btn:hover{opacity:.75;}
+#mute-btn svg{display:block;}
+
+.marquee-wrap{
+  flex:1;
+  overflow:hidden;
+  position:relative;
+}
+
+.marquee-inner{
+  display:inline-flex;
+  white-space:nowrap;
+  animation:marquee-scroll 22s linear infinite;
+}
+.marquee-inner span{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#E8000A;
+  padding-right:80px;
+}
+
+@keyframes marquee-scroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+body{padding-bottom:42px;}
 </style>
 </head>
 <body>
@@ -219,7 +274,7 @@ aspect-ratio:468/213;
     <img src="assets/watch-btn.png" class="layer watch-btn" alt="Watch">
   </a>
 
-  <!-- EPISODES — hover swap на YouTube thumbnails -->
+  <!-- EPISODES -->
   <a href="https://youtu.be/kkoJiwkVasM" target="_blank">
     <div class="episode ep1">
       <img src="assets/ep1.png" class="episode-default" alt="Episode 1">
@@ -265,9 +320,37 @@ aspect-ratio:468/213;
   <p>The project explores contemporary electronic music inspired by the cultural code of underground club scenes from the 1990s and 2000s.</p>
 </div>
 
-<script>
-const hoverSound = document.getElementById('hoverSound');
+<!-- AUDIO BAR -->
+<div id="audio-bar">
+  <button id="mute-btn" title="Toggle sound" aria-label="Toggle sound">
+    <svg id="icon-muted" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 9.5H8L14 4V22L8 16.5H4V9.5Z" fill="#FFE600"/>
+      <line x1="17" y1="8" x2="25" y2="18" stroke="#E8000A" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="25" y1="8" x2="17" y2="18" stroke="#E8000A" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <svg id="icon-active" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <path d="M4 9.5H8L14 4V22L8 16.5H4V9.5Z" fill="#FFE600"/>
+      <path d="M17 9.5C18.2 10.7 19 12.2 19 13C19 13.8 18.2 15.3 17 16.5" stroke="#FFE600" stroke-width="2" stroke-linecap="round"/>
+      <path d="M20 7C22.2 9.2 23.5 11.1 23.5 13C23.5 14.9 22.2 16.8 20 19" stroke="#FFE600" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
 
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span id="track-label-1">Track name: Brzhezovsky — Detroit &nbsp;✦&nbsp;  Transcendence Sonic Sessions &nbsp;✦&nbsp; KURS Radio &nbsp;✦&nbsp; Progressive House &nbsp;✦&nbsp; UK Garage &nbsp;✦&nbsp; Leftfield &nbsp;✦&nbsp; Uplifting &nbsp;✦&nbsp; Techno &nbsp;✦&nbsp; KURS Radio</span>
+      <span id="track-label-2">Track name: Brzhezovsky — Detroit &nbsp;✦&nbsp;  Transcendence Sonic Sessions &nbsp;✦&nbsp; KURS Radio &nbsp;✦&nbsp; Progressive House &nbsp;✦&nbsp; UK Garage &nbsp;✦&nbsp; Leftfield &nbsp;✦&nbsp; Uplifting &nbsp;✦&nbsp; Techno</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN TRACK: положи файл в assets/track.mp3 -->
+<audio id="mainTrack" loop preload="none">
+  <source src="assets/track.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* hover sound */
+const hoverSound = document.getElementById('hoverSound');
 document.querySelectorAll('.layer, .show-wrap, .episode').forEach(el => {
   el.addEventListener('mouseenter', () => {
     hoverSound.currentTime = 0;
@@ -275,6 +358,37 @@ document.querySelectorAll('.layer, .show-wrap, .episode').forEach(el => {
     hoverSound.play().catch(() => {});
   });
 });
+
+/* mute toggle */
+const mainTrack  = document.getElementById('mainTrack');
+const muteBtn    = document.getElementById('mute-btn');
+const iconMuted  = document.getElementById('icon-muted');
+const iconActive = document.getElementById('icon-active');
+let playing = false;
+
+function setMuted(muted){
+  if(muted){
+    mainTrack.pause();
+    iconMuted.style.display  = 'block';
+    iconActive.style.display = 'none';
+    playing = false;
+  } else {
+    mainTrack.volume = 0.55;
+    mainTrack.play().catch(()=>{});
+    iconMuted.style.display  = 'none';
+    iconActive.style.display = 'block';
+    playing = true;
+  }
+}
+
+muteBtn.addEventListener('click', () => setMuted(playing));
+setMuted(true); /* выключен по умолчанию */
+
+/* сменить название трека: setTrackName('Artist — Track Name'); */
+function setTrackName(name){
+  document.getElementById('track-label-1').textContent = name;
+  document.getElementById('track-label-2').textContent = name;
+}
 </script>
 
 </body>
