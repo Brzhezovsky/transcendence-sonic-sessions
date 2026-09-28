@@ -31,13 +31,26 @@ body{background:#000;font-family:Arial,Helvetica,sans-serif;}
 .site{position:relative;max-width:1024px;margin:0 auto;}
 .background{display:block;width:100%;height:auto;}
 
-.seo-content{
+.about-overlay{
 position:absolute;
-left:-9999px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
+left:4%;
+top:87.4%;
+width:34%;
+z-index:20;
+padding:clamp(1px,.39vw,4px) clamp(2px,.58vw,6px);
+color:#111;
+font-family:Arial,Helvetica,sans-serif;
+font-size:clamp(3px,1.03vw,10.5px);
+line-height:1.24;
+font-weight:600;
+}
+
+.about-overlay p{
+margin:0 0 clamp(2px,.4vw,4px);
+}
+
+.about-overlay p:last-child{
+margin-bottom:0;
 }
 
 .layer{
@@ -315,12 +328,11 @@ body{padding-bottom:42px;}
     <img src="assets/stay-tuned.png" class="layer stay-tuned" alt="Stay Tuned on Telegram">
   </a>
 
-</div>
+  <div class="about-overlay">
+    <p>Transcendence Sonic Sessions is a monthly radio show and podcast by Brzhezovsky on KURS Radio, focused on Progressive House, Neo Trance, UK Garage and underground electronic music.</p>
+    <p>Each episode draws on the spirit of underground club culture of the 1990s and 2000s.</p>
+  </div>
 
-<div class="seo-content">
-  <h1>Transcendence Sonic Sessions</h1>
-  <p>Transcendence Sonic Sessions is a monthly radio show by Brzhezovsky on KURS Radio featuring Progressive House, Neo Trance, UK Garage and modern underground electronic music.</p>
-  <p>The project explores contemporary electronic music inspired by the cultural code of underground club scenes from the 1990s and 2000s.</p>
 </div>
 
 <!-- AUDIO BAR -->
