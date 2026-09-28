@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brzhezovsky.github.io/transcendence-sonic-sessions/sitemap.xml
